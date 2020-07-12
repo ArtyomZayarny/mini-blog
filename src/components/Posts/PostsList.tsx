@@ -26,7 +26,8 @@ const PostList:React.FC<PostListProps> = (props) => {
             <h2>Post List</h2>
             { list.length > 0 && list.map( (post:IPost) => {
                  return <PostItem 
-                                key={post.id}   
+                                key={post.id}
+                                postId={post.id}   
                                 title={post.title} 
                                 body={post.body}
                                 userId={post.userId}

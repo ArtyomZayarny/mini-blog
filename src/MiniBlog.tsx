@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import PostList from './components/Posts/PostsList';
-import Comment from './components/Comments/Comment';
+import AuthorInfo from './components/AuthorInfo/AuthorInfo';
 import styles from './MiniBlog.module.css'
 
 
@@ -9,7 +9,9 @@ interface IData {
 }
 
 const MiniBlog = () => {
-  const [data,setData] = useState<IData>({authorID:null});
+  const [data,setData] = useState<IData>({
+    authorID:null
+  });
 
     const postSelect = (id:number):void => {
       setData({...data, authorID:id})
@@ -17,7 +19,7 @@ const MiniBlog = () => {
   return (
     <div className={styles.miniBlog}>
       <PostList onSelect={postSelect} />
-      <Comment />
+       {data.authorID && <AuthorInfo authorId={data.authorID}/> }
     </div>
   );
 }
