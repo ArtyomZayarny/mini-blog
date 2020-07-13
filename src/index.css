@@ -11,3 +11,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.App {
+  padding:20px
+}
+.App .ui.items>.item .extra,
+.App .ui.items .description {
+  display: none;
+}
+.App .ui.items>.item .extra.show,
+.App .ui.items .description.show {
+  display: block;
+}
+.author {
+  position: relative;
+}       

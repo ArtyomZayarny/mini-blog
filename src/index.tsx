@@ -6,7 +6,9 @@ import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <MiniBlog />
+    <div className="App">
+       <MiniBlog />
+    </div>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -34,17 +34,17 @@ const AuthorInfo:React.FC<AuthorInfoProps> = ({authorId, ...props}) => {
     }, [data])
 
     return (
-        <>
-        <Dimmer active={loading === true} inverted>
-            <Loader>Loading...</Loader>
-        </Dimmer>
-        <div className={styles.author}>
-            <h3>AuthorInfo</h3>
-            <p>Name : {authorInfo.name}</p>
-            <p>E-mail : {authorInfo.email}</p>
-            <p>Phone : {authorInfo.phone}</p>
+        <div className="author">
+            <Dimmer active={loading === true} inverted>
+                <Loader>Loading...</Loader>
+            </Dimmer>
+            <div className={styles.author}>
+                <h3>AuthorInfo</h3>
+                <p>Name : {authorInfo.name}</p>
+                <p>E-mail : {authorInfo.email}</p>
+                <p>Phone : {authorInfo.phone}</p>
+            </div>
         </div>
-        </>
     )
 }
 export default AuthorInfo
